@@ -14,7 +14,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Avanti</title>
+    <title>Avanti - Loja virtual</title>
 </head>
 
 <body>
@@ -28,20 +28,24 @@
                 <div class="flex-shrink-0">
                     <img src="./assets/images/logo.png" alt="Logo" />
                 </div>
-                <div class="hidden md:flex relative flex-grow max-w-xl mx-6">
-                    <input type="text" placeholder="Digite aqui o que você procura"
-                        class="w-full border border-gray-300 rounded-md py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-black" />
-                    <button
-                        class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer">
-                        <svg class="h-[1.5em] opacity-100 text-black" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24">
-                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" fill="none"
-                                stroke="currentColor">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.3-4.3"></path>
-                            </g>
-                        </svg>
-                    </button>
+                <div class="hidden md:flex flex-col relative flex-grow max-w-xl mx-6">
+                    <div class="relative w-full">
+                        <input type="text" id="searchInput" placeholder="Digite aqui o que você procura"
+                            class="w-full border border-gray-300 rounded-md py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-black" />
+                        <button
+                            onclick="search()"
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer">
+                            <svg class="h-[1.5em] opacity-100 text-black" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" fill="none"
+                                    stroke="currentColor">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="searchResponse" class="text-sm text-gray-600 mt-2"></p>
                 </div>
                 <div class="flex items-center space-x-6">
                     <div class="hidden md:flex items-center space-x-1 text-sm">

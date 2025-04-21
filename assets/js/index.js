@@ -13,3 +13,20 @@ const swiper = new Swiper('.swiper', {
     loop: true,
 });
 
+
+function search(event) {
+    const searchInput = document.getElementById("searchInput"); 
+    const searchResponse = document.getElementById("searchResponse");
+    
+    if (searchInput && searchResponse) {
+        const query = searchInput.value.trim();
+
+        if (query !== "") {
+            const sanitizedQuery = query.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            searchResponse.innerHTML = `Você buscou por: <span class='font-medium'>"${sanitizedQuery}"</span>`;
+        } else {
+            searchResponse.innerHTML = "";
+        }
+    } 
+}
+
