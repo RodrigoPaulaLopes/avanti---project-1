@@ -30,3 +30,13 @@ function search(event) {
     } 
 }
 
+function toggleCategorias() {
+    const menu = document.getElementById("menu-categorias");
+    menu.classList.toggle("hidden");
+  }
+
+  function toggleDepartamentos() {
+    const menu = document.getElementById("menu-departamentos");
+    menu.classList.toggle("hidden");
+  }
+
