@@ -20,13 +20,13 @@
 
 <body>
     <header>
-        <div class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 w-full max-w-full">
-            <div class="p-1 bg-blue-800 text-white flex items-center justify-center">
+        <!-- Desktop head -->
+        <div class="md:bg-white md:shadow-md md:fixed md:top-0 md:left-0 md:right-0 md:z-50 md:w-full md:max-w-full">
+            <div class="hidden p-1 bg-blue-800 text-white flex items-center justify-center">
                 <span class="text-center">Ganhe <span class="bg-[#6220c1] rounded-full p-1"> R$10,00</span> de desconto
                     no seu primeiro pedido. Utilize o cupom DESCONTO10</span>
             </div>
-            <!-- Desktop head -->
-            <div class="hidden max-w-7xl mx-auto md:flex items-center justify-between py-4">
+            <div class="hidden max-w-7xl px-4 mx-auto md:flex items-center justify-between py-4">
                 <div class="flex-shrink-0">
                     <img src="./assets/images/logo.png" alt="Logo" />
                 </div>
@@ -66,7 +66,7 @@
                 </div>
 
             </div>
-            <div class="hidden max-w-7xl mx-auto md:flex md:items-center md:justify-between py-4">
+            <div class="hidden max-w-7xl px-4 mx-auto md:flex md:items-center md:justify-between py-4">
                 <nav class="w-full">
                     <div class="flex items-center gap-8">
                         <!-- Menu Dropdown Categories -->
@@ -79,8 +79,8 @@
                             </button>
 
                             <div
-                                class="group-hover:block absolute Z-100 h-[460px] w-[1280px] left-0 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
-                                <div class="grid grid-cols-7 w-full">
+                                class="group-hover:block absolute Z-100 h-[460px] w-full md:w-[1280px] left-0 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
+                                <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-7 w-full">
 
                                     <div class="col-span-2 overflow-y-auto custom-scroll max-h-[460px]">
                                         <li
@@ -316,9 +316,16 @@
                     </div>
                 </nav>
             </div>
-            <!-- End desktop header -->
-            <!-- Mobile Header -->
-            <div class="md:hidden w-full flex flex-col p-10">
+
+        </div>
+        <!-- End desktop header -->
+        <!-- Mobile Header -->
+        <div class="md:hidden shadow-md w-full">
+            <div class="bg-blue-800 text-white text-center">
+                <span class="text-center">Ganhe <span class="bg-[#6220c1] rounded-full p-1"> R$10,00</span> de desconto
+                    no seu primeiro pedido. Utilize o cupom DESCONTO10</span>
+            </div>
+            <div class="w-full flex flex-col p-4 md:p-10">
                 <div class="flex justify-between items-center">
                     <div>
                         <i class="fa-solid fa-bars text-3xl"></i>
@@ -353,39 +360,39 @@
                     </div>
                     <p id="searchResponse" class="text-sm text-gray-600 mt-2"></p>
                 </div>
-
             </div>
-            <!-- End Mobile Header -->
-
         </div>
+        <!-- End Mobile Header -->
     </header>
-    <main class="mt-[190px]">
+    <main class="md:mt-[160px]">
         <section>
-
             <div class="bg-gray-200">
-                <div class=" max-w-6xl mx-auto flex flex-row items-center justify-between ">
+                <div class="w-full md:max-w-6xl mx-auto flex flex-row items-center justify-between">
                     <div class="rounded-lg">
-                        <img src="./assets/images/chair.png" alt="Avanti" />
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./assets/images/chair.png" />
+                            <img src="./assets/images/chair_mobile.png" alt="Avanti" />
+                          </picture>
                     </div>
-                    <div>
-                        <h1 class="text-[100px] text-center font-nunito"><span class="font-extrabold">SUPER</span><span
+                    <div class="p-4">
+                        <h1 class="text-[40px] md:text-[100px] text-center"><span class="font-extrabold">SUPER</span><span
                                 class="font-light">SALE</span></h1>
-                        <p class="text-blue-600 text-center font-medium text-[25px] font-nunito tracking-[.25em] ">ITENS
+                        <p class="text-blue-600 text-center font-medium text-[12px] md:text-[25px] tracking-[.25em] ">ITENS
                             SELECIONADOS COM ATÉ </p>
-                        <p class="text-blue-600 text-center font-medium text-[60px] font-nunito">50% OFF</p>
+                        <p class="text-blue-600 text-center font-medium text-[32px]  md:text-[60px]">50% OFF</p>
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div class="max-w-7xl mx-auto mt-11">
+            <div class="max-w-7xl px-4 mx-auto mt-11">
                 <div class="flex items-center justify-between">
                     <span class="text-lg font-semibold">Lançamentos</span>
                     <a class="cursor-pointer font-medium">Ver mais</a>
                 </div>
                 <div class="swiper">
-                    <div class="swiper-wrapper mb-8">
-                        <div class="swiper-slide flex-shrink-0 w-[300px]">
+                    <div class="swiper-wrapper mb-8 overflow-x-auto">
+                        <div class="swiper-slide flex-shrink-0 w-[min(300px,90vw)]">
                             <div
                                 class="bg-white rounded-lg shadow-sm border border-gray-200 transition-shadow hover:shadow-md">
                                 <div class="relative">
@@ -427,7 +434,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide flex-shrink-0 w-[300px]">
+                        <div class="swiper-slide flex-shrink-0 w-[min(300px,90vw)]">
                             <div
                                 class="bg-white rounded-lg shadow-sm border border-gray-200 transition-shadow hover:shadow-md">
                                 <div class="relative">
@@ -469,7 +476,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide flex-shrink-0 w-[300px]">
+                        <div class="swiper-slide flex-shrink-0 w-[min(300px,90vw)]">
                             <div
                                 class="bg-white rounded-lg shadow-sm border border-gray-200 transition-shadow hover:shadow-md">
                                 <div class="relative">
@@ -511,7 +518,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide flex-shrink-0 w-[300px]">
+                        <div class="swiper-slide flex-shrink-0 w-[min(300px,90vw)]">
                             <div
                                 class="bg-white rounded-lg shadow-sm border border-gray-200 transition-shadow hover:shadow-md">
                                 <div class="relative">
@@ -553,7 +560,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide flex-shrink-0 w-[300px]">
+                        <div class="swiper-slide flex-shrink-0 w-[min(300px,90vw)]">
                             <div
                                 class="bg-white rounded-lg shadow-sm border border-gray-200 transition-shadow hover:shadow-md">
                                 <div class="relative">
@@ -595,7 +602,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide flex-shrink-0 w-[300px]">
+                        <div class="swiper-slide flex-shrink-0 w-[min(300px,90vw)]">
                             <div
                                 class="bg-white rounded-lg shadow-sm border border-gray-200 transition-shadow hover:shadow-md">
                                 <div class="relative">
@@ -656,7 +663,7 @@
             </div>
         </section>
         <section>
-            <div class="max-w-6xl mx-auto  grid grid-cols-2 mt-8">
+            <div class="md:max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 mt-8">
                 <div class="bg-gray-300 col-span-1 flex justify-center items-center">
                     <img src="assets/images/mug.png" alt="coupe">
                 </div>
@@ -733,7 +740,7 @@
             </div>
         </section>
         <section>
-            <div class="max-w-7xl mx-auto mt-11">
+            <div class="max-w-7xl mx-auto px-4 mt-11">
                 <div class="flex items-center justify-between">
                     <span class="text-lg font-semibold">Lançamentos</span>
                     <a class="cursor-pointer font-medium">Ver mais</a>
@@ -1020,9 +1027,9 @@
             </div>
         </section>
         <section>
-            <div class="max-w-7xl w-full mx-auto flex flex-col justify-center items-center mt-8">
+            <div class="md:max-w-7xl px-4 w-full mx-auto flex flex-col justify-center items-center mt-8">
                 <h1 class="text-lg font-medium">Cadastre-se na nossa <span class="text-blue-600">newsletter</span></h1>
-                <div class="bg-gray-300 w-full p-20 flex items-center justify-between gap-4 mt-8">
+                <div class="bg-gray-300 w-full p-20 flex flex-col md:flex-row items-center justify-between gap-4 mt-8">
                     <input type="text" class="input" placeholder="Digite seu nome">
                     <input type="text" class="input" placeholder="Digite seu email">
                     <div class="flex gap-2">
@@ -1038,11 +1045,11 @@
     </main>
     <footer
         class="footer sm:footer-horizontal bg-gray-100 text-neutral-content mt-8 w-full flex flex-col items-center pt-20">
-        <div class="flex flex-col justify-between gap-8 max-w-6xl  w-full mx-auto">
-            <div class="flex justify-between gap-8 w-full ">
+        <div class="flex flex-col justify-between gap-8 md:max-w-6xl w-full mx-auto">
+            <div class="flex  flex-col md:flex-row justify-between gap-8 w-full ">
                 <div>
                     <img src="assets/images/logo_footer.png" alt="">
-                    <div class="flex justify-between mt-8 gap-8">
+                    <div class="flex flex-col md:flex-row justify-between mt-8 gap-8 md:gap-2">
                         <img src="assets/images/instagram.png" alt="" class="h-[20px] w-auto">
                         <img src="assets/images/facebook.png" alt="" class="h-[20px] w-auto">
                         <img src="assets/images/youtube-logo.png" alt="" class="h-[20px] w-auto">
@@ -1083,7 +1090,7 @@
                         </ul>
                 </nav>
             </div>
-            <div class="flex justify-center items-center gap-4 w-full mt-4">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 w-full mt-4">
                 <img src="assets/images/amex.png" alt="">
                 <img src="assets/images/União 32.png" alt="">
                 <img src="assets/images/visa.png" alt="">
@@ -1096,7 +1103,7 @@
             </div>
         </div>
         <div class="bg-white w-full py-20 px-30">
-            <div class="max-w-7xl mx-auto">
+            <div class="max-w-7xl px-4 mx-auto">
 
                 <p class="text-center text-gray-800">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                     nonummy nibh

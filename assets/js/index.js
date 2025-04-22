@@ -20,7 +20,8 @@ function search(event) {
 
     if (searchInput && searchResponse) {
         const query = searchInput.value.trim();
-
+        console.log(query);
+        
         if (query !== "") {
             const sanitizedQuery = query.replace(/</g, "&lt;").replace(/>/g, "&gt;");
             searchResponse.innerHTML = `Você buscou por: <span class='font-medium'>"${sanitizedQuery}"</span>`;
