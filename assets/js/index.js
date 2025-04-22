@@ -15,9 +15,9 @@ const swiper = new Swiper('.swiper', {
 
 
 function search(event) {
-    const searchInput = document.getElementById("searchInput"); 
+    const searchInput = document.getElementById("searchInput");
     const searchResponse = document.getElementById("searchResponse");
-    
+
     if (searchInput && searchResponse) {
         const query = searchInput.value.trim();
 
@@ -27,16 +27,8 @@ function search(event) {
         } else {
             searchResponse.innerHTML = "";
         }
-    } 
+    }
 }
 
-function toggleCategorias() {
-    const menu = document.getElementById("menu-categorias");
-    menu.classList.toggle("hidden");
-  }
 
-  function toggleDepartamentos() {
-    const menu = document.getElementById("menu-departamentos");
-    menu.classList.toggle("hidden");
-  }
 

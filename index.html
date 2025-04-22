@@ -69,19 +69,20 @@
             <div class="hidden max-w-7xl mx-auto md:flex md:items-center md:justify-between py-4">
                 <nav class="w-full">
                     <div class="flex items-center gap-8">
-                        <div class="relative">
+                        <!-- Menu Dropdown Categories -->
+                        <div class="relative group">
 
-                            <button onclick="toggleCategorias()"
+                            <button
                                 class="flex items-center space-x-2 py-3 text-gray-700 hover:text-blue-600 cursor-pointer transition-colors">
                                 <i class="fa-solid fa-bars"></i>
                                 <span class="whitespace-nowrap font-medium">Todas as Categorias</span>
                             </button>
-                            <!-- Menu Dropdown Categories -->
-                            <div id="menu-categorias"
-                                class="absolute h-[460px] w-[1280px] left-0 mt-2 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
-                                <div class="grid grid-cols-5 w-full">
 
-                                    <div class="col-span-1 overflow-y-auto custom-scroll max-h-[460px]">
+                            <div
+                                class="group-hover:block absolute h-[460px] w-[1280px] left-0 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
+                                <div class="grid grid-cols-7 w-full">
+
+                                    <div class="col-span-2 overflow-y-auto custom-scroll max-h-[460px]">
                                         <li
                                             class="px-4 py-2 hover:text-blue-600  cursor-pointer  flex justify-between items-center">
                                             <span>Departamento</span>
@@ -193,16 +194,18 @@
                                         </ul>
 
                                     </div>
-                                    <div class="w-full h-[360px] px-5 mt-2">
+                                    <div class="col-span-2 justify-self-end w-[300px] h-[360px]  px-5 mt-2">
 
                                         <div
                                             class="relative h-full overflow-hidden rounded-lg shadow-lg max-w-sm transition duration-300 hover:shadow-xl">
                                             <div
                                                 class="absolute inset-0 bg-[url('/assets/images/menu_avanti.png')] bg-no-repeat bg-center bg-cover z-0">
                                             </div>
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" ></div>
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+                                            </div>
 
-                        
+
                                             <div
                                                 class="relative z-20 flex flex-col justify-center h-full text-white space-y-4 p-4">
                                                 <h1 class="text-lg font-medium leading-tight">
@@ -221,62 +224,68 @@
 
                                 </div>
                             </div>
-                            <!-- End Menu Dropdown Categories -->
-                        </div>
 
-                        <div class="relative">
-                            <a href="#" onclick="toggleDepartamentos()" class="py-3 text-gray-600 hover:text-blue-600 whitespace-nowrap">Departamento</a>
+                        </div>
+                        <!-- End Menu Dropdown Categories -->
+                        <!-- Menu Dropdown Departament -->
+                        <div class="relative group">
+                            <a href="#"
+                                class="py-3 text-gray-600 hover:text-blue-600 whitespace-nowrap">Departamento</a>
                             <div id="menu-departamentos"
-                                class="absolute h-[460px] w-[1280px] left-0 mt-2 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
-                                <div class="grid grid-cols-5 w-full">
+                                class="group-hover:block absolute h-[460px] w-[1280px] left-0 mt-2 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
+                                <div class="px-4 mt-4">
+                                    <h1 class="text-lg font-medium">Departamento</h1>
+                                </div>
+                                <div class="grid grid-cols-6 w-full">
                                     <div class="col-span-1 mt-2">
                                         <ul>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 1</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 2</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 3</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 4</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 5</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 6</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 7</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 8</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
                                         </ul>
                                     </div>
                                     <div class="col-span-1 mt-2">
                                         <ul>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 1</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 2</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 3</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 4</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 5</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 6</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 7</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 8</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
                                         </ul>
 
                                     </div>
-                                    <div class="col-span-1 mt-2">
+                                    <div class="col-span-2 mt-2">
                                         <ul>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 1</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 2</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 3</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 4</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 5</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 6</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 7</li>
-                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria 8</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
+                                            <li class="px-4 py-2 hover:text-blue-600  cursor-pointer">Categoria</li>
                                         </ul>
 
                                     </div>
-                                    <div class="w-full h-[360px] px-5 mt-2">
-
+                                    <div class="col-span-2 justify-self-end w-[300px] h-[360px] px-5 mt-2 items-end">
                                         <div
-                                            class="relative h-full overflow-hidden rounded-lg shadow-lg max-w-sm transition duration-300 hover:shadow-xl">
+                                            class="relative h-full w-[236px] overflow-hidden rounded-lg shadow-lg max-w-sm transition duration-300 hover:shadow-xl">
                                             <div
                                                 class="absolute inset-0 bg-[url('/assets/images/menu_avanti.png')] bg-no-repeat bg-center bg-cover z-0">
                                             </div>
-                                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" ></div>
+                                            <div
+                                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
+                                            </div>
 
-                        
+
                                             <div
                                                 class="relative z-20 flex flex-col justify-center h-full text-white space-y-4 p-4">
                                                 <h1 class="text-lg font-medium leading-tight">
@@ -296,6 +305,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- End Dropdown Departament -->
                         <a href="#" class="py-3 text-gray-600 hover:text-blue-600 whitespace-nowrap">Departamento</a>
                         <a href="#" class="py-3 text-gray-600 hover:text-blue-600 whitespace-nowrap">Departamento</a>
                         <a href="#" class="py-3 text-gray-600 hover:text-blue-600 whitespace-nowrap">Departamento</a>
