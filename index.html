@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <div class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 w-full max-w-full">
             <div class="p-1 bg-blue-800 text-white flex items-center justify-center">
                 <span class="text-center">Ganhe <span class="bg-[#6220c1] rounded-full p-1"> R$10,00</span> de desconto
                     no seu primeiro pedido. Utilize o cupom DESCONTO10</span>
@@ -79,7 +79,7 @@
                             </button>
 
                             <div
-                                class="group-hover:block absolute h-[460px] w-[1280px] left-0 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
+                                class="group-hover:block absolute Z-100 h-[460px] w-[1280px] left-0 bg-white border border-gray-200 rounded shadow-lg hidden z-50">
                                 <div class="grid grid-cols-7 w-full">
 
                                     <div class="col-span-2 overflow-y-auto custom-scroll max-h-[460px]">
@@ -317,6 +317,46 @@
                 </nav>
             </div>
             <!-- End desktop header -->
+            <!-- Mobile Header -->
+            <div class="md:hidden w-full flex flex-col p-10">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <img src="./assets/images/logo.png" alt="Logo" />
+                    </div>
+                    <div class="relative">
+                        <img src="./assets/images/mobile_kart.png"
+                            class="text-gray-700 hover:text-black transition-colors" />
+                        <span
+                            class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                            2
+                        </span>
+                    </div>
+                </div>
+                <div class="md:flex flex-col relative flex-grow w-full mt-4">
+                    <div class="relative w-full">
+                        <input type="text" id="searchInput" placeholder="Digite aqui o que você procura"
+                            class="w-full border border-gray-300 rounded-md py-2 pl-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-black" />
+                        <button onclick="search()"
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer">
+                            <svg class="h-[1.5em] opacity-100 text-black" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" fill="none"
+                                    stroke="currentColor">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="searchResponse" class="text-sm text-gray-600 mt-2"></p>
+                </div>
+
+            </div>
+            <!-- End Mobile Header -->
+
         </div>
     </header>
     <main class="mt-[190px]">
