@@ -1034,43 +1034,34 @@
         <section>
             <div class="md:max-w-7xl px-4 w-full mx-auto flex flex-col justify-center items-center mt-8">
                 <h1 class="text-lg font-medium text-center">
-                  Cadastre-se na nossa <span class="text-blue-600">newsletter</span>
+                    Cadastre-se na nossa <span class="text-blue-600">newsletter</span>
                 </h1>
-              
+
                 <form
-                  class="bg-gray-300 w-full py-10 px-5 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mt-8"
-                >
-                  <input
-                    type="text"
-                    class="input w-full md:w-[20%]"
-                    placeholder="Digite seu nome"
-                  />
-                  <input
-                    type="text"
-                    class="input w-full md:w-[25%]"
-                    placeholder="Digite seu email"
-                  />
-              
-                  <div class="flex items-center justify-center md:items-center gap-2 w-full md:w-auto">
-                    <input type="checkbox" class="" />
-                    <label class="text-sm">
-                      Estou de acordo com a <span class="underline">Política de Privacidade</span>
-                    </label>
-                  </div>
-              
-                  <button class="btn bg-blue-600 text-white rounded-lg w-full md:w-auto px-6 py-2">
-                    Cadastrar
-                  </button>
+                    class="bg-gray-300 w-full py-10 px-5 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mt-8">
+                    <input type="text" class="input w-full md:w-[20%]" placeholder="Digite seu nome" />
+                    <input type="text" class="input w-full md:w-[25%]" placeholder="Digite seu email" />
+
+                    <div class="flex items-center justify-center md:items-center gap-2 w-full md:w-auto">
+                        <input type="checkbox" class="" />
+                        <label class="text-sm">
+                            Estou de acordo com a <span class="underline">Política de Privacidade</span>
+                        </label>
+                    </div>
+
+                    <button class="btn bg-blue-600 text-white rounded-lg w-full md:w-auto px-6 py-2">
+                        Cadastrar
+                    </button>
                 </form>
-              </div>
-              
+            </div>
+
 
         </section>
     </main>
     <footer
         class="footer sm:footer-horizontal bg-gray-100 text-neutral-content mt-8 w-full flex flex-col items-center pt-20">
         <div class="flex flex-col justify-between gap-8 md:max-w-6xl w-full mx-auto">
-            <div class="flex flex-col md:flex-row justify-between gap-8 w-full ">
+            <div class="flex flex-col md:flex-row justify-between gap-8 w-full px-10">
                 <div class="flex flex-col justify-center items-center">
                     <img src="assets/images/logo_footer.png" alt="">
                     <div class="flex flex-row justify-between mt-8 gap-8 md:gap-2">
@@ -1081,22 +1072,41 @@
                     </div>
                 </div>
                 <nav class="flex flex-col gap-2">
-                    <h4 class=" text-black font-semibold">Institucional</h6>
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection(this)">
+                        <h6 class="text-black font-semibold">Institucional</h6>
+                        <i
+                            class="icon text-blue-600 fa-solid fa-chevron-down text-black text-sm transition-transform duration-300"></i>
+                    </div>
+
+                    <div class="submenu hidden flex flex-col">
                         <a class="link link-hover text-black">Sobre Nós</a>
                         <a class="link link-hover text-black">Nossas Lojas</a>
                         <a class="link link-hover text-black">Privacidade e Segurança</a>
                         <a class="link link-hover text-black">Termos e condições</a>
+                    </div>
                 </nav>
                 <nav class="flex flex-col gap-2">
-                    <h4 class="text-black font-semibold">Central de ajuda</h6>
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection(this)">
+                        <h6 class="text-black font-semibold">Central de ajuda</h6>
+                        <i
+                            class="icon text-blue-600 fa-solid fa-chevron-down text-black text-sm transition-transform duration-300"></i>
+                    </div>
+                    <div class="submenu hidden flex flex-col">
                         <a class="link link-hover text-black">Fale Conosco</a>
                         <a class="link link-hover text-black">Frete e Entrega</a>
                         <a class="link link-hover text-black">Trocas e Devoluções</a>
                         <a class="link link-hover text-black">Formas de Pagamento</a>
                         <a class="link link-hover text-black">FAQ</a>
+                    </div>
                 </nav>
                 <nav class="flex flex-col gap-2">
-                    <h4 class=" text-black font-semibold">Atendimento</h6>
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection(this)">
+                        <h6 class="text-black font-semibold">Atendimento</h6>
+                        <i
+                            class="icon text-blue-600 fa-solid fa-chevron-down text-black text-sm transition-transform duration-300"></i>
+
+                    </div>
+                    <div class="submenu hidden flex flex-col">
                         <a class="link link-hover text-black"><span class="font-medium">Telefone:</span> (00)
                             1234-5678</a>
                         <a class="link link-hover text-black"><span class="font-medium">E-mail:</span>
@@ -1112,6 +1122,8 @@
 
                             </li>
                         </ul>
+                    </div>
+
                 </nav>
             </div>
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 w-full mt-4">
