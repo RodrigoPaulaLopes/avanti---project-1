@@ -1072,26 +1072,28 @@
                     </div>
                 </div>
                 <nav class="flex flex-col gap-2">
-                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection(this)">
+                    <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+                        onclick="toggleSection(this)">
                         <h6 class="text-black font-semibold">Institucional</h6>
                         <i
-                            class="icon text-blue-600 fa-solid fa-chevron-down text-black text-sm transition-transform duration-300"></i>
+                            class="icon fa-solid fa-chevron-down text-black text-sm text-blue-600 transition-transform duration-300 md:hidden"></i>
                     </div>
-
-                    <div class="submenu hidden flex flex-col">
+                    <div class="submenu hidden flex flex-col md:flex">
                         <a class="link link-hover text-black">Sobre Nós</a>
                         <a class="link link-hover text-black">Nossas Lojas</a>
                         <a class="link link-hover text-black">Privacidade e Segurança</a>
                         <a class="link link-hover text-black">Termos e condições</a>
                     </div>
                 </nav>
+
                 <nav class="flex flex-col gap-2">
-                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection(this)">
+                    <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+                        onclick="toggleSection(this)">
                         <h6 class="text-black font-semibold">Central de ajuda</h6>
                         <i
-                            class="icon text-blue-600 fa-solid fa-chevron-down text-black text-sm transition-transform duration-300"></i>
+                            class="icon fa-solid text-blue-600  fa-chevron-down text-black text-sm transition-transform duration-300 md:hidden"></i>
                     </div>
-                    <div class="submenu hidden flex flex-col">
+                    <div class="submenu hidden flex flex-col md:flex">
                         <a class="link link-hover text-black">Fale Conosco</a>
                         <a class="link link-hover text-black">Frete e Entrega</a>
                         <a class="link link-hover text-black">Trocas e Devoluções</a>
@@ -1099,31 +1101,25 @@
                         <a class="link link-hover text-black">FAQ</a>
                     </div>
                 </nav>
+
                 <nav class="flex flex-col gap-2">
-                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleSection(this)">
+                    <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+                        onclick="toggleSection(this)">
                         <h6 class="text-black font-semibold">Atendimento</h6>
                         <i
-                            class="icon text-blue-600 fa-solid fa-chevron-down text-black text-sm transition-transform duration-300"></i>
-
+                            class="icon text-blue-600 fa-solid fa-chevron-down text-black text-sm transition-transform duration-300 md:hidden"></i>
                     </div>
-                    <div class="submenu hidden flex flex-col">
+                    <div class="submenu hidden flex flex-col md:flex">
                         <a class="link link-hover text-black"><span class="font-medium">Telefone:</span> (00)
                             1234-5678</a>
                         <a class="link link-hover text-black"><span class="font-medium">E-mail:</span>
                             exemplo@exemplo.com</a>
-                        <a class="link link-hover text-black font-medium">Horario de Atendimento:</a>
+                        <a class="link link-hover text-black font-medium">Horário de Atendimento:</a>
                         <ul>
-                            <li>
-                                <a class="link link-hover text-black">Segunda á Sabado: 07h00 as 23h00</a>
-
-                            </li>
-                            <li>
-                                <a class="link link-hover text-black">Domingos e Feriados: 07h00 as 21h00</a>
-
-                            </li>
+                            <li><a class="link link-hover text-black">Segunda a Sábado: 07h00 às 23h00</a></li>
+                            <li><a class="link link-hover text-black">Domingos e Feriados: 07h00 às 21h00</a></li>
                         </ul>
                     </div>
-
                 </nav>
             </div>
             <div class="flex flex-row px-20 flex-wrap justify-center items-center gap-4 w-full mt-4">
@@ -1138,19 +1134,16 @@
                 <img src="assets/images/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.png" alt="">
             </div>
         </div>
-        <div class="bg-white w-full py-20 px-30">
+        <div class="bg-white w-full py-10 px-5 md:py-20 md:px-30 h-[500px] md:h-full">
             <div class="max-w-7xl px-4 mx-auto">
 
-                <p class="text-center text-gray-800">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                    nonummy nibh
-                    euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                    dolor
-                    in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-                    at
-                    vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-                    dolore te feugait nulla facilisi.</p>
+                <p class="text-center text-gray-800 text-sm line-clamp-4 md:line-clamp-none">Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit, sed diam
+                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                    veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                    consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+                    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
+                    blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 
                 <div class="flex justify-center items-center gap-4 w-full mt-4">
                     <img src="assets/images/lets_encrypt.png" alt="">
