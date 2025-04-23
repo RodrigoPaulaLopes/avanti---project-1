@@ -60,4 +60,58 @@ function toggleSection(header) {
 }
 
 
+function updateVisibility(value) {
+  const stepper = document.getElementById("stepper");
+  const buyButton = document.getElementById("buy_button");
+  const plusButton = document.getElementById("plus_button");
+
+  if (value === 0) {
+    stepper.classList.add("hidden");
+    buyButton.classList.remove("hidden");
+  } else {
+    stepper.classList.remove("hidden");
+    buyButton.classList.add("hidden");
+  }
+
+  if (value >= 5) {
+    plusButton.disabled = true;
+    plusButton.classList.add("opacity-50", "cursor-not-allowed");
+  } else {
+    plusButton.disabled = false;
+    plusButton.classList.remove("opacity-50", "cursor-not-allowed");
+  }
+}
+
+
+function plus() {
+  const quantity = document.getElementById("qtde_value");
+  const plus_button = document.getElementById("plus_button")
+  let value = parseInt(quantity.innerText);
+  value += 1;
+  quantity.innerText = value;
+ 
+  updateVisibility(value);
+}
+
+function minus() {
+  const quantity = document.getElementById("qtde_value");
+  let value = parseInt(quantity.innerText);
+  if (value > 0) {
+    value -= 1;
+  }
+  quantity.innerText = value;
+  updateVisibility(value);
+}
+
+function buy() {
+  const quantity = document.getElementById("qtde_value");
+  quantity.innerText = 1;
+  updateVisibility(1);
+}
+
+window.onload = () => {
+  updateVisibility(0);
+};
+
+
 
